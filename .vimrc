@@ -31,3 +31,4 @@ call plug#end()
 
 " plugin map define
 map <F2> :NERDTree<CR>
+
