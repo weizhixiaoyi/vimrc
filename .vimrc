@@ -27,8 +27,8 @@ inoremap jk <ESC>
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'preservim/nerdtree'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 " plugin map define
 map <F2> :NERDTree<CR>
-
