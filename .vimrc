@@ -12,14 +12,6 @@ set encoding=utf8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1,utf-16
 
 " vim map define
-noremap <Up> <Nop>
-inoremap <Up> <Nop>
-noremap <Down> <Nop>
-inoremap <Down> <Nop>
-noremap <Left> <Nop>
-inoremap <Left> <Nop>
-noremap <Right> <Nop>
-inoremap <Right> <Nop>
 inoremap jk <ESC>
 
 " plug managment
