@@ -20,7 +20,22 @@ call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
+Plug 'jiangmiao/auto-pairs'
+Plug 'preservim/nerdcommenter'
+ Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 call plug#end()
 
 " plugin map define
+" NERDTree Setting
 map <F2> :NERDTree<CR>
+" autocmd vimenter * NERDTree
+" autocmd VimEnter * wincmd p
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Leaderf Setting
+let g:Lf_WindowPosition = 'right'
+nnoremap <Leader>f :Leaderf file<CR>
+nnoremap <Leader>F :Leaderf function<CR>
+nnoremap <Leader>l :Leaderf line<CR>
+nnoremap <Leader>b :Leaderf buffer<CR>
+nnoremap <Leader>m :Leaderf mru<CR>
