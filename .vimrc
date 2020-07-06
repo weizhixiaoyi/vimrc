@@ -22,7 +22,7 @@ Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
- Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 call plug#end()
 
 " plugin map define
@@ -30,7 +30,11 @@ call plug#end()
 map <F2> :NERDTree<CR>
 " autocmd vimenter * NERDTree
 " autocmd VimEnter * wincmd p
+" close vim if the only window left open is a NERDTree
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" open a NERDTree automatically when vim starts up if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Leaderf Setting
 let g:Lf_WindowPosition = 'right'
