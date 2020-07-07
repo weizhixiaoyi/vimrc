@@ -15,7 +15,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 + `vim .vimrc`
 
-+ `PlugInstall`
++ `:PlugInstall`
++ `:q `, `:wq`
 
 ### 2. 插件
 
