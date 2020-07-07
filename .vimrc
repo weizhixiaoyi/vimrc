@@ -17,9 +17,8 @@ inoremap jk <ESC>
 " plug managment
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.vim/plugged')
-Plug 'itchyny/lightline.vim'
-Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
+Plug 'preservim/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
@@ -37,7 +36,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Leaderf Setting
-let g:Lf_WindowPosition = 'right'
+let g:Lf_WindowPosition = 'popup'
 nnoremap <Leader>f :Leaderf file<CR>
 nnoremap <Leader>F :Leaderf function<CR>
 nnoremap <Leader>l :Leaderf line<CR>
