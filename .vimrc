@@ -1,10 +1,10 @@
 " basic
 set history=50
 syntax enable
-syntax on
 set number
-set autoindent
 set cursorline
+set backspace=2
+set autoindent
 set tabstop=4
 set expandtab " tab -> [space][space][space][space]
 
@@ -22,6 +22,7 @@ Plug 'preservim/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " plugin map define
